@@ -1,0 +1,95 @@
+<html>
+<head>
+<style>
+	div {width: 800px;
+		 height: 400px;}
+	button#left {float: left;}
+	button#right {float: right;}
+
+</style>
+</head>
+<body onload="loading()">
+
+
+
+
+<center>
+
+
+
+<div >
+<button id="left" onclick="back()"><</button>
+	<img id="one" src="1.jpg"></img>
+	<img id="two" src="2.jpg"></img>
+	<img id="three" src="3.png"></img>
+<button id="right" onclick="forward()">></button>
+</div>
+
+
+
+
+
+</center>
+
+<script>
+	function loading() {
+		window.n = 1;
+		ff();
+	}
+	
+	function back() {
+		if (n == 1)
+		{
+		n = 3;
+		}
+		else {
+		n -= 1;
+		}
+		ff();
+		}
+	function forward() {
+		if (n == 3) {
+		n = 1;
+		}
+		else {
+		n += 1;
+		}
+		ff();
+		}
+	function ff() {	
+		if (n == 1) {
+			 document.getElementById("one").style.display="block";
+			 document.getElementById("two").style.display="none";
+			 document.getElementById("three").style.display="none";
+			 }
+		if (n == 2) {
+			  document.getElementById("one").style.display="none";
+			 document.getElementById("two").style.display="block";
+			 document.getElementById("three").style.display="none";
+			 }
+		if (n == 3) 
+			{
+			 document.getElementById("one").style.display="none";
+			 document.getElementById("two").style.display="none";
+			 document.getElementById("three").style.display="block";
+			 }
+		}	
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
